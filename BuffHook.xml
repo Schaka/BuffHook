@@ -1,0 +1,20 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+	..\FrameXML\UI.xsd">
+
+	<Script file="BuffHook.lua"/>
+	<Frame name="BuffHookFrame" hidden="false" inherits="ActionButtonTemplate">
+		<Scripts>
+			<OnEvent>
+				EnemyBuffTimers:OnEvent(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+			</OnEvent>
+			<!--<OnUpdate>EnemyBuffTimers:OnUpdate(arg1)</OnUpdate>-->
+		</Scripts>
+	</Frame>
+	<GameTooltip name="BuffHookToolTip" frameStrata="TOOLTIP" hidden="true" inherits="GameTooltipTemplate">
+		<Scripts>
+			<OnLoad>
+				this:SetOwner(UIParent,"ANCHOR_NONE")
+			</OnLoad>
+		</Scripts> 
+	</GameTooltip>
+</Ui>

@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: BuffHook (to show enemy's buffs)
+## Author: Schaka
+## Notes: Shows enemies buffs by hooking WoW API UnitBuff(unitID, index) - works with EnemyBuffTimersVanilla
+BuffHook.xml
